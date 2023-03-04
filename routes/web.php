@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -18,5 +20,6 @@ Route::get('/', function () {
 });
 
 Route::prefix('game')->group(function () {
-    Route::get('/lol', 'Games/LolController@index');
+    Route::get('/lol', Controllers\Games\LeagueOfLegends\LolController::class . '@index');
 });
+
